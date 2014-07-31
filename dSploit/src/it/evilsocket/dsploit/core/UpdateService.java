@@ -1190,7 +1190,7 @@ public class UpdateService extends IntentService
     // because android does not comes with a compiler.
 
     shell = Shell.async( String.format(
-            "sed -i \"/source 'https:\\/\\/rubygems.org'/a\\\nsource '%s'\" '%s/Gemfile'",
+            "sed -i \"/source 'http:\\/\\/rubygems.org'/a\\\nsource '%s'\" '%s/Gemfile'",
             REMOTE_GEM_SERVER, msfPath), mErrorReceiver);
 
     if(execShell(shell, "cancelled while adding our gem server")!=0)
